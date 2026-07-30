@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <link rel="icon" href="favicon.png">
+    
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#e7bd82"
+    >
+
+    <title>Para Nandini</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Special+Elite&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="aplicacion">
+
+        <!-- =========================================
+             PORTADA
+        ========================================== -->
+
+        <section
+            id="pantalla-portada"
+            class="pantalla pantalla-portada activa"
+        >
+
+            <div class="escena-portada">
+
+                <img
+                    src="decoraciones/flores-secas.png"
+                    class="decoracion-portada flor-seca-portada"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="decoraciones/gerbera-naranja.png"
+                    class="decoracion-portada gerbera-portada-naranja"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="decoraciones/gerbera-rosa.png"
+                    class="decoracion-portada gerbera-portada-rosa"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="decoraciones/hojas.png"
+                    class="decoracion-portada hojas-portada"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <span
+                    class="garabato-portada corazon-exterior"
+                    aria-hidden="true"
+                >
+                    ♡
+                </span>
+
+                <span
+                    class="garabato-portada estrella-exterior"
+                    aria-hidden="true"
+                >
+                    ✦
+                </span>
+
+                <div
+                    id="libro-cerrado"
+                    class="libro-cerrado"
+                >
+
+                    <div class="lomo-libro"></div>
+
+                    <div class="marco-portada">
+
+                        <span
+                            class="estrella-portada"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </span>
+
+                        <h1 class="titulo-portada">
+
+                            <span class="recorte recorte-nuestro">
+                                Nuestro
+                            </span>
+
+                            <span class="fila-titulo">
+
+                                <span class="recorte recorte-libro">
+                                    Libro
+                                </span>
+
+                                <span class="recorte recorte-de">
+                                    de
+                                </span>
+
+                            </span>
+
+                            <span class="recorte recorte-aventuras">
+                                Aventuras
+                            </span>
+
+                        </h1>
+
+                        <img
+                            src="decoraciones/cinta-washi.png"
+                            class="cinta-portada cinta-nuestro"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <img
+                            src="decoraciones/cinta-washi.png"
+                            class="cinta-portada cinta-libro"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <img
+                            src="decoraciones/cinta-washi.png"
+                            class="cinta-portada cinta-aventuras"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <p class="dedicatoria-portada">
+                            Hecho con mucho cariño para ti
+                        </p>
+
+                        <span
+                            class="corazon-portada"
+                            aria-hidden="true"
+                        >
+                            ♡
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+                    id="boton-abrir"
+                    class="boton-abrir"
+                    type="button"
+                >
+                    Abrir nuestro libro
+                    <span aria-hidden="true">→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LIBRO ABIERTO
+        ========================================== -->
+
+        <section
+            id="pantalla-libro"
+            class="pantalla pantalla-libro"
+        >
+
+            <div
+                id="zona-libro"
+                class="zona-libro tema-carta"
+            >
+
+                <header class="barra-libro">
+
+                    <button
+                        id="boton-cerrar"
+                        class="boton-cerrar"
+                        type="button"
+                    >
+                        ← Cerrar
+                    </button>
+
+                    <p class="nombre-libro">
+                        Nuestro Libro de Aventuras
+                    </p>
+
+                    <span id="contador-pagina">
+                        1 / 8
+                    </span>
+
+                </header>
+
+
+                <!-- Reproductor -->
+
+                <div class="musica">
+
+                    <button
+                        id="boton-musica"
+                        class="boton-musica"
+                        type="button"
+                        aria-label="Reproducir una cancioncita para ti"
+                    >
+                        <span id="icono-musica">▶</span>
+
+                        <span id="texto-musica">
+                            Una cancioncita para ti ♡
+                        </span>
+                    </button>
+
+                    <div class="ondas" id="ondas" aria-hidden="true">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+                <audio
+                    id="audio"
+                    preload="metadata"
+                    loop
+                >
+                    <source
+                        src="music/cancion.mp3"
+                        type="audio/mpeg"
+                    >
+                </audio>
+
+
+                <div
+                    id="libro-abierto"
+                    class="libro-abierto"
+                >
+
+                    <div class="pliegue-central"></div>
+
+
+                    <!-- =================================
+                         PÁGINA 1: CARTA
+                    ================================== -->
+
+                    <article
+                        class="pagina activa"
+                        data-tema="tema-carta"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/flores-secas.png"
+                            class="adorno-hoja flor-carta"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja carta">
+
+                            <h2
+                                id="titulo-carta"
+                                class="titulo-carta"
+                            ></h2>
+
+                            <span
+                                id="corazon-carta"
+                                class="corazon-carta"
+                                aria-hidden="true"
+                            ></span>
+
+                            <div class="cuerpo-carta">
+
+                                <p>
+                                    No sabía muy bien cómo hacer un regalo
+                                    que pudiera guardar momentos.
+                                </p>
+
+                                <p>
+                                    Así que decidí construir un pequeño libro
+                                    donde podamos seguir escribiendo nuestra
+                                    historia.
+                                </p>
+
+                                <p>
+                                    Espero que cada página te recuerde lo
+                                    especial que eres y te saque una sonrisa.
+                                </p>
+
+                            </div>
+
+                            <p class="firma-carta">
+                                Con mucho cariño, Josemita
+                                <span>♡</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 2: CARNICA
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-carnica"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/gerbera-naranja.png"
+                            class="adorno-hoja gerbera-carnica"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 1</span>
+
+                                <h2>
+                                    Donde comenzó una bonita costumbre
+                                </h2>
+
+                            </header>
+
+                            <div class="composicion-una-foto">
+
+                                <figure class="polaroid polaroid-carnica">
+
+                                    <img
+                                        src="recuerdos/01-carnica.jpg"
+                                        alt="Nuestro primer recuerdo en Carnica"
+                                    >
+
+                                    <figcaption>
+                                        Nuestra primera polaroid
+                                    </figcaption>
+
+                                </figure>
+
+                                <img
+                                    src="decoraciones/cinta-washi.png"
+                                    class="cinta-foto cinta-foto-centro"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+
+                            </div>
+
+                            <p class="fecha-recuerdo">
+                                23 de mayo de 2026
+                            </p>
+
+                            <p class="frase-recuerdo">
+                                Hay días que parecen cualquier día,
+                                hasta que terminan convirtiéndose en
+                                uno de tus favoritos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 3: PLAYA
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-playa"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/hojas.png"
+                            class="adorno-hoja hojas-playa"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 2</span>
+
+                                <h2>
+                                    Nuestro paseo al mar
+                                </h2>
+
+                            </header>
+
+                            <div class="collage-doble">
+
+                                <figure class="polaroid foto-doble foto-izquierda">
+
+                                    <img
+                                        src="recuerdos/02-playa-abrazo.jpg"
+                                        alt="Abrazo durante nuestro paseo"
+                                    >
+
+                                </figure>
+
+                                <figure class="polaroid foto-doble foto-derecha">
+
+                                    <img
+                                        src="recuerdos/03-playa-selfie.jpg"
+                                        alt="Selfie durante nuestro paseo"
+                                    >
+
+                                </figure>
+
+                                <img
+                                    src="decoraciones/cinta-washi.png"
+                                    class="cinta-foto cinta-playa-uno"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+
+                                <img
+                                    src="decoraciones/cinta-washi.png"
+                                    class="cinta-foto cinta-playa-dos"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+
+                            </div>
+
+                            <p class="frase-recuerdo">
+                                El mar se siente diferente cuando hay
+                                alguien con quien compartir las risas,
+                                el frío y hasta los silencios.
+                            </p>
+
+                            <p class="nota-margen">
+                                Un día para guardar entre las páginas ♡
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 4: ATARDECER
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-atardecer"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/gerbera-rosa.png"
+                            class="adorno-hoja gerbera-atardecer"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 3</span>
+
+                                <h2>
+                                    Persiguiendo atardeceres
+                                </h2>
+
+                            </header>
+
+                            <div class="foto-paisaje-marco">
+
+                                <img
+                                    src="recuerdos/05-atardecer.jpg"
+                                    alt="Nandini frente al mar durante el atardecer"
+                                >
+
+                                <img
+                                    src="decoraciones/cinta-washi.png"
+                                    class="cinta-foto cinta-atardecer"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+
+                            </div>
+
+                            <p class="frase-recuerdo frase-atardecer">
+                                Tal vez no lo digo mucho,
+                                pero me gusta mucho verte sonreír
+                                mientras el horizonte hace lo suyo.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 5: MAMMA MIA
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-teatro"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <div class="estrellas-teatro" aria-hidden="true">
+                            ✦　·　✦
+                        </div>
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 4</span>
+
+                                <h2>
+                                    Nuestra primera función
+                                </h2>
+
+                            </header>
+
+                            <div class="entrada-teatro">
+
+                                <div class="agujeros-entrada"></div>
+
+                                <span>ADMIT ONE</span>
+
+                                <strong>MAMMA MIA!</strong>
+
+                                <small>
+                                    Una noche para recordar
+                                </small>
+
+                            </div>
+
+                            <figure class="polaroid polaroid-teatro">
+
+                                <img
+                                    src="recuerdos/04-mammamia.jpg"
+                                    alt="Nuestra primera salida al teatro para ver Mamma Mia"
+                                >
+
+                                <figcaption>
+                                    Nuestra primera vez en el teatro ♡
+                                </figcaption>
+
+                            </figure>
+
+                            <p class="frase-recuerdo">
+                                Las mejores historias también se viven
+                                entre luces, canciones y alguien especial
+                                sentado a tu lado.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 6: VIDEOLLAMADAS
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-distancia"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/flores-secas.png"
+                            class="adorno-hoja flor-distancia"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 5</span>
+
+                                <h2>
+                                    Incluso cuando la distancia aparecía
+                                </h2>
+
+                            </header>
+
+                            <div class="collage-llamadas">
+
+                                <figure class="captura-llamada llamada-grande">
+
+                                    <span class="estado-llamada">
+                                        Videollamada ♡
+                                    </span>
+
+                                    <img
+                                        src="recuerdos/06-videollamada1.jpg"
+                                        alt="Una de nuestras videollamadas"
+                                    >
+
+                                </figure>
+
+                                <figure class="captura-llamada llamada-pequena">
+
+                                    <img
+                                        src="recuerdos/07-videollamada2.jpg"
+                                        alt="Nandini durante una videollamada"
+                                    >
+
+                                </figure>
+
+                            </div>
+
+                            <p class="frase-recuerdo">
+                                Aunque no estuviéramos en el mismo lugar,
+                                siempre encontrábamos una forma de
+                                acompañarnos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 7: CINE
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-cine"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/gerbera-naranja.png"
+                            class="adorno-hoja gerbera-cine"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja capitulo">
+
+                            <header class="encabezado-capitulo">
+
+                                <span>Capítulo 6</span>
+
+                                <h2>
+                                    Una salida llena de risas
+                                </h2>
+
+                            </header>
+
+                            <div class="composicion-una-foto">
+
+                                <figure class="polaroid polaroid-cine">
+
+                                    <img
+                                        src="recuerdos/08-cine.jpg"
+                                        alt="Nuestra última salida juntos"
+                                    >
+
+                                    <figcaption>
+                                        Una foto imperfectamente feliz
+                                    </figcaption>
+
+                                </figure>
+
+                                <img
+                                    src="decoraciones/cinta-washi.png"
+                                    class="cinta-foto cinta-foto-centro"
+                                    alt=""
+                                    aria-hidden="true"
+                                >
+
+                            </div>
+
+                            <p class="frase-recuerdo">
+                                No necesito que cada foto sea perfecta.
+                                Me basta con que conserve la risa
+                                que teníamos cuando la tomamos.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================
+                         PÁGINA 8: FINAL
+                    ================================== -->
+
+                    <article
+                        class="pagina"
+                        data-tema="tema-final"
+                    >
+
+                        <div class="textura-hoja"></div>
+
+                        <img
+                            src="decoraciones/hojas.png"
+                            class="adorno-hoja hojas-final"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <img
+                            src="decoraciones/gerbera-rosa.png"
+                            class="adorno-hoja gerbera-final"
+                            alt=""
+                            aria-hidden="true"
+                        >
+
+                        <div class="contenido-hoja pagina-final">
+
+                            <p class="etiqueta-final">
+                                Este no es el final
+                            </p>
+
+                            <h2>
+                                Y aquí se seguirán llenando
+                                más cositas nuestras &lt;3
+                            </h2>
+
+                            <p>
+                                Todavía quedan fotografías por tomar,
+                                lugares por conocer, comidas por probar,
+                                atardeceres por mirar y muchas páginas
+                                por escribir.
+                            </p>
+
+                            <div class="papel-futuro">
+
+                                <span>
+                                    Próxima aventura
+                                </span>
+
+                                <div class="linea-futura"></div>
+                                <div class="linea-futura corta"></div>
+
+                            </div>
+
+                            <strong class="continuara">
+                                Continuará...
+                            </strong>
+
+                            <span class="corazon-final">♡</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Navegación -->
+
+                    <button
+                        id="pagina-anterior"
+                        class="esquina esquina-anterior"
+                        type="button"
+                        aria-label="Ir a la página anterior"
+                        disabled
+                    >
+                        <span>←</span>
+                    </button>
+
+                    <button
+                        id="pagina-siguiente"
+                        class="esquina esquina-siguiente"
+                        type="button"
+                        aria-label="Ir a la página siguiente"
+                    >
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="indicadores"
+                    class="indicadores"
+                    aria-label="Páginas del libro"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
